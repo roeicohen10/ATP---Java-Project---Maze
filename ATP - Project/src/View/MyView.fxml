@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import View.MazeDisplay?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+
+<?import View.SolDisplay?>
+<?import View.WinnerDisplay?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="-6.0" prefHeight="408.0" prefWidth="600.0">
+         <left>
+            <VBox prefHeight="283.0" prefWidth="181.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="208.0">
+                     <children>
+                        <Label text="Number of Rows" />
+                        <TextField fx:id="rowsText" prefHeight="25.0" prefWidth="79.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="129.0">
+                     <children>
+                        <Label text="Number of Coloumns" />
+                        <TextField fx:id="colsText" prefHeight="25.0" prefWidth="64.0" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" text="Generate Maze" />
+                  <Button mnemonicParsing="false" text="Solve Maze" />
+               </children>
+            </VBox>
+         </left>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" >
+                <children>
+                    <MazeDisplay fx:id="mazeDisplay"  height="150" width="150" />
+                    <SolDisplay fx:id="SolDisplay" />
+                    <WinnerDisplay fx:id="winnerDisplay"/>
+                </children>
+            </Pane>
+
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
